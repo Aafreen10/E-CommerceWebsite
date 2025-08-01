@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationery - TradeHive</title>
+    <link rel="stylesheet" href="stationery.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TradeHive Logo">
+            <span class="site-name">TradeHive</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="seller.html">Seller</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="stationery-section">
+        <h1>✏️ Trendy & Stylish Stationery! 📖</h1>
+        <div class="offer-banner">🛍️ Flat 40% Off on Combo Sets! 🎉</div>
+        <div class="product-container">
+            <div class="product">
+                <img src="notebook.jpg" alt="Notebook">
+                <p>Premium Notebook</p>
+                <p>₹299</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Premium Notebook', 299)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="pen_set.jpg" alt="Pen Set">
+                <p>Luxury Pen Set</p>
+                <p>₹499</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Luxury Pen Set', 499)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="highlighter.jpg" alt="Highlighter Set">
+                <p>Colorful Highlighter Set</p>
+                <p>₹199</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Colorful Highlighter Set', 199)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="art_kit.jpg" alt="Art Kit">
+                <p>Professional Art Kit</p>
+                <p>₹1,299</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Professional Art Kit', 1299)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="planner.jpg" alt="Planner">
+                <p>Daily Planner</p>
+                <p>₹599</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Daily Planner', 599)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="sticky_notes.jpg" alt="Sticky Notes">
+                <p>Sticky Notes (Set of 5)</p>
+                <p>₹149</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Sticky Notes (Set of 5)', 149)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function buyNow(productName, price) {
+            localStorage.setItem('productName', productName);
+            localStorage.setItem('productPrice', price);
+            window.location.href = "buy.html";
+        }
+    </script>
+
+</body>
+</html>

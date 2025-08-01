@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture - TradeHive</title>
+    <link rel="stylesheet" href="furniture.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TradeHive Logo">
+            <span class="site-name">TradeHive</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="seller.html">Seller</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="furniture-section">
+        <h1>🛋️ Elegant Furniture Collection 🏡</h1>
+        <div class="offer-banner">✨ Flat 40% OFF on Modern Furniture! ✨</div>
+        <div class="product-container">
+            <div class="product">
+                <img src="sofa.jpg" alt="Luxury Sofa">
+                <p>Luxury Sofa Set</p>
+                <p>₹45,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Luxury Sofa Set', 45999)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="dining_table.jpg" alt="Dining Table">
+                <p>Wooden Dining Table</p>
+                <p>₹32,499</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Wooden Dining Table', 32499)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="bed.jpg" alt="King Size Bed">
+                <p>King Size Bed with Storage</p>
+                <p>₹55,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('King Size Bed', 55999)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="wardrobe.jpg" alt="Wardrobe">
+                <p>Spacious Wardrobe</p>
+                <p>₹29,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Spacious Wardrobe', 29999)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="bookshelf.jpg" alt="Bookshelf">
+                <p>Modern Bookshelf</p>
+                <p>₹12,499</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Modern Bookshelf', 12499)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="coffee_table.jpg" alt="Coffee Table">
+                <p>Glass Coffee Table</p>
+                <p>₹8,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Glass Coffee Table', 8999)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function buyNow(productName, price) {
+            localStorage.setItem('productName', productName);
+            localStorage.setItem('productPrice', price);
+            window.location.href = "buy.html";
+        }
+    </script>
+
+</body>
+</html>

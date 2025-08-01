@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav ul li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px 14px;
+    display: inline-block;
+    font-weight: 600;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ff4c29;
+    transform: scale(1.1);
+}
+
+/* Category Section */
+.categories {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.categories h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #1a1a2e;
+}
+
+/* Category Grid */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Category Card */
+.category {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.category img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+/* Hover Effect */
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}

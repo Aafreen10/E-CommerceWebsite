@@ -1,0 +1,145 @@
+/* Import Stylish Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Background */
+body {
+    background-color: #f8f8f8;
+}
+
+/* Header Navigation Bar */
+header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo and Text Container (Fixing Alignment) */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and text */
+}
+
+/* Logo Image */
+.logo-container img {
+    height: 50px;
+    width: auto;
+}
+
+/* TradeHive Text Styling */
+.tradehive {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff4c29, #ff8c00, #ff4c29);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.tradehive:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav ul li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Navigation Links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px 14px;
+    display: inline-block;
+    font-weight: 600;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Animation for Menu */
+nav ul li a:hover {
+    color: #ff4c29;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/bgimage4.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 120px 20px;
+    min-height: 80vh; /* Fixed Background Height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Welcome Text - Stylish & Gradient */
+.hero h1 {
+    font-size: 42px;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(45deg, #ff4c29, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+/* Sign Up Button */
+.hero .signup-btn {
+    background-color: #ff4c29;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero .signup-btn:hover {
+    background-color: #e84118;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+}

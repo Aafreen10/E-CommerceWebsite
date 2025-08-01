@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home & Living - TradeHive</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TradeHive Logo">
+            <span class="site-name">TradeHive</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="seller.html">Seller</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home-living-section">
+        <h1>Stylish Home & Living Collection</h1>
+        <div class="offer-banner">🏡 Flat 35% OFF on Home & Living Items! ✨</div>
+        <div class="product-container">
+            <div class="product">
+                <img src="sofa.jpg" alt="Sofa">
+                <p>Luxury Sofa Set</p>
+                <p>₹25,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Luxury Sofa Set', 25999)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="bedsheet.jpg" alt="Bedsheet">
+                <p>Premium Cotton Bedsheet</p>
+                <p>₹1,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Premium Cotton Bedsheet', 1999)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="lamp.jpg" alt="Lamp">
+                <p>Elegant Table Lamp</p>
+                <p>₹3,499</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Elegant Table Lamp', 3499)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="dining_table.jpg" alt="Dining Table">
+                <p>Modern Dining Table</p>
+                <p>₹15,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Modern Dining Table', 15999)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="curtains.jpg" alt="Curtains">
+                <p>Silk Window Curtains</p>
+                <p>₹2,599</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Silk Window Curtains', 2599)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="wall_decor.jpg" alt="Wall Decor">
+                <p>Handmade Wall Decor</p>
+                <p>₹4,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Handmade Wall Decor', 4999)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function buyNow(productName, price) {
+            localStorage.setItem('productName', productName);
+            localStorage.setItem('productPrice', price);
+            window.location.href = "buy.html";
+        }
+    </script>
+
+</body>
+</html>

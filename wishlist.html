@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - TradeHive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>TradeHive</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Add to Cart</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="seller.html">Seller</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="wishlist">
+        <h2>Wishlist Items</h2>
+        <div class="wishlist-items">
+            <!-- Wishlist items will be shown here -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const wishlistContainer = document.querySelector(".wishlist-items");
+            const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            function displayWishlist() {
+                wishlistContainer.innerHTML = "";
+                if (wishlist.length === 0) {
+                    wishlistContainer.innerHTML = "<p>Your wishlist is empty.</p>";
+                } else {
+                    wishlist.forEach((item, index) => {
+                        const productDiv = document.createElement("div");
+                        productDiv.classList.add("wishlist-item");
+                        productDiv.innerHTML = `
+                            <img src="images/${item.image}" alt="${item.name}">
+                            <p>${item.name}</p>
+                            <p>₹${item.price}</p>
+                            <button onclick="removeFromWishlist(${index})">Remove</button>
+                        `;
+                        wishlistContainer.appendChild(productDiv);
+                    });
+                }
+            }
+
+            window.removeFromWishlist = function(index) {
+                wishlist.splice(index, 1);
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                displayWishlist();
+            };
+
+            displayWishlist();
+        });
+    </script>
+</body>
+</html>

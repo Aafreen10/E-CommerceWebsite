@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toys - TradeHive</title>
+    <link rel="stylesheet" href="toys.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TradeHive Logo">
+            <span class="site-name">TradeHive</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="seller.html">Seller</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="toys-section">
+        <h1>🧸 Fun & Exciting Toys for Kids! 🚀</h1>
+        <div class="offer-banner">🎁 Buy 1 Get 1 Free on Selected Toys! 🎁</div>
+        <div class="product-container">
+            <div class="product">
+                <img src="teddy_bear.jpg" alt="Teddy Bear">
+                <p>Soft Teddy Bear</p>
+                <p>₹999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Soft Teddy Bear', 999)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="lego_set.jpg" alt="LEGO Set">
+                <p>LEGO Creative Set</p>
+                <p>₹1,499</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('LEGO Creative Set', 1499)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="remote_car.jpg" alt="Remote Car">
+                <p>Remote Control Car</p>
+                <p>₹2,199</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Remote Control Car', 2199)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="doll_house.jpg" alt="Doll House">
+                <p>Beautiful Doll House</p>
+                <p>₹3,299</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Beautiful Doll House', 3299)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="puzzle.jpg" alt="Puzzle Game">
+                <p>Brain Teaser Puzzle</p>
+                <p>₹799</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Brain Teaser Puzzle', 799)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="stuffed_animal.jpg" alt="Stuffed Animal">
+                <p>Fluffy Stuffed Animal</p>
+                <p>₹899</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Fluffy Stuffed Animal', 899)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function buyNow(productName, price) {
+            localStorage.setItem('productName', productName);
+            localStorage.setItem('productPrice', price);
+            window.location.href = "buy.html";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories - TradeHive</title>
+    <link rel="stylesheet" href="accessories.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TradeHive Logo">
+            <span class="site-name">TradeHive</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="seller.html">Seller</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="accessories-section">
+        <h1>Trendy Accessories Collection</h1>
+        <div class="offer-banner">🛍️ Flat 30% OFF on All Accessories! 🎉</div>
+        <div class="product-container">
+            <div class="product">
+                <img src="sunglasses.jpg" alt="Sunglasses">
+                <p>Stylish Sunglasses</p>
+                <p>₹1,299</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Stylish Sunglasses', 1299)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="handbag.jpg" alt="Handbag">
+                <p>Elegant Handbag</p>
+                <p>₹2,499</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Elegant Handbag', 2499)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="watch.jpg" alt="Wrist Watch">
+                <p>Luxury Wrist Watch</p>
+                <p>₹3,799</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Luxury Wrist Watch', 3799)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="earrings.jpg" alt="Earrings">
+                <p>Diamond Earrings</p>
+                <p>₹1,999</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Diamond Earrings', 1999)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="bracelet.jpg" alt="Bracelet">
+                <p>Elegant Bracelet</p>
+                <p>₹899</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Elegant Bracelet', 899)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="wallet.jpg" alt="Leather Wallet">
+                <p>Premium Leather Wallet</p>
+                <p>₹1,499</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Premium Leather Wallet', 1499)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="necklace.jpg" alt="Necklace">
+                <p>Gold-Plated Necklace</p>
+                <p>₹2,799</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Gold-Plated Necklace', 2799)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="cap.jpg" alt="Cap">
+                <p>Trendy Cap</p>
+                <p>₹699</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow('Trendy Cap', 699)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function buyNow(productName, price) {
+            localStorage.setItem('productName', productName);
+            localStorage.setItem('productPrice', price);
+            window.location.href = "buy.html";
+        }
+    </script>
+
+</body>
+</html>

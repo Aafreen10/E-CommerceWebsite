@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Product - TradeHive</title>
+    <link rel="stylesheet" href="buy.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TradeHive Logo">
+            <span class="site-name">TradeHive</span>
+        </div>
+    </header>
+
+    <section class="buy-section">
+        <h1>Confirm Your Order</h1>
+        <div class="order-details">
+            <p><strong>Product:</strong> <span id="productName"></span></p>
+            <p><strong>Price:</strong> ₹<span id="productPrice"></span></p>
+            <p><strong>Delivery Charges:</strong> ₹50</p>
+            <p><strong>Total Cost:</strong> ₹<span id="totalCost"></span></p>
+            <button class="place-order-btn">Place Order</button>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("productName").innerText = localStorage.getItem("productName");
+        let price = localStorage.getItem("productPrice");
+        document.getElementById("productPrice").innerText = price;
+        document.getElementById("totalCost").innerText = parseInt(price) + 50;
+    </script>
+
+</body>
+</html>
