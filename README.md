@@ -4,3 +4,4 @@
 ![product images](https://github.com/Aafreen10/E-CommerceWebsite/blob/master/Project_Screenshots/accessories.png?raw=true)
 ![product images](https://github.com/Aafreen10/E-CommerceWebsite/blob/master/Project_Screenshots/mens.png?raw=true)
 ![checkout page](https://github.com/Aafreen10/E-CommerceWebsite/blob/master/Project_Screenshots/checkoutpage.JPG?raw=true)
+![add to cart](https://github.com/Aafreen10/E-CommerceWebsite/blob/master/Project_Screenshots/addtocart.JPG?raw=true)
